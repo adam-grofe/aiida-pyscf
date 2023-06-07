@@ -90,6 +90,15 @@ class PyscfCalculation(CalcJob):
         spec.output_namespace(
             'cubegen.orbitals', valid_type=SinglefileData, required=False, help='Molecular orbitals in `.cube` format.'
         )
+        spec.output(
+            'cubegen.density', valid_type=SinglefileData, required=False, help='The charge density in `.cube` format.'
+        )
+        spec.output(
+            'cubegen.mep',
+            valid_type=SinglefileData,
+            required=False,
+            help='The molecular electrostatic potential (MEP) in `.cube` format.'
+        )
 
         spec.exit_code(302, 'ERROR_OUTPUT_STDOUT_MISSING', message='The stdout output file was not retrieved.')
         spec.exit_code(303, 'ERROR_OUTPUT_RESULTS_MISSING', message='The results JSON file was not retrieved.')

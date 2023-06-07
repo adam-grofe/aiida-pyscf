@@ -125,7 +125,9 @@ def test_parameters_cubegen(generate_calc_job, generate_inputs_pyscf, file_regre
                     'nz': 40,
                     'margin': 3.0,
                 }
-            }
+            },
+            'density': {},
+            'mep': {},
         },
     }
     inputs = generate_inputs_pyscf(parameters=parameters)
