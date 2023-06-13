@@ -1,0 +1,15 @@
+name: aiida-pyscf-mep
+channels:
+  - pyscf
+  - conda-forge
+  - defaults
+dependencies:
+   - python
+   - pyscf
+   - geometric
+   - nglview =3.0.3
+   - libblas=*=*mkl
+   - jupyterlab_widgets =1.1.2
+   - aiida-core
+   - pip:
+     - /anfhome/v-adamgrofe/aiida-pyscf
